@@ -11,7 +11,7 @@ export class EditEmployeeComponent implements OnInit {
   @ViewChild("f") form: any;
   id: any;
   emp;
-  constructor(private route: ActivatedRoute, private service: EmployeeService, private router: Router) { }
+  constructor(public route: ActivatedRoute, public service: EmployeeService, public router: Router) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];

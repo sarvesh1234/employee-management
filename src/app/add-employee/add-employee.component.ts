@@ -10,12 +10,20 @@ import { v4 as uuid } from 'uuid';
   styleUrls: ['./add-employee.component.scss']
 })
 export class AddEmployeeComponent implements OnInit {
-  @ViewChild("f") form: any;
-  emps;
+  
+  public emps: any;
+  userData = {
+    firstName: '',
+    Salary: '',
+    position: '',
+    age: ''
+  };
   constructor(private service: EmployeeService, private router: Router) { }
+  @ViewChild("f") form: any;
 
   ngOnInit() {
-    this.emps = this.service.getEmployees();
+      this.emps = this.service.getEmployees();
+
 
   }
 
