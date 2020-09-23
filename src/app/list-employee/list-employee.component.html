@@ -1,0 +1,22 @@
+<div class="row">
+    <ul *ngFor="let item of employees">
+        <div class="card col-sm">
+            <div class="card-body">
+                <h4 class="card-title">
+                    Name: {{item.firstName}}
+                </h4>
+                <p class="card-text">
+                    Position: {{item.position}}
+                </p>
+                <p class="card-text">
+                    Salary: {{item.Salary}}
+                </p>
+                <p class="card-text">
+                    Age: {{item.age}}
+                </p>
+                <a  [routerLink]="['/edit-employee', item.id]" class="btn btn-primary">Edit</a>
+        <button (click)="deleteEmployee(item.id)" style="margin-left: 20px;" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </ul>
+</div>

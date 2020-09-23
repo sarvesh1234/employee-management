@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "emp-management"
+    }
+  },
+  "defaultProject": "emp-management",
+  "cli": {
+    "analytics": false
+  }
 }
